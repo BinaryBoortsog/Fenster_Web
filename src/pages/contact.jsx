@@ -1,6 +1,6 @@
 import { FaCheck } from "react-icons/fa";
 import React, { useState } from "react";
-
+import { assets } from "../assets/assets";
 const Contact = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -34,7 +34,7 @@ const Contact = () => {
     <div className="bg-white flex flex-col items-center justify-center">
       <div
         className="bg-cover bg-center flex items-center justify-center w-full"
-        style={{ backgroundImage: "url('/header_img.png')" , height: "50vh" }}
+        style={{backgroundImage: `url(${assets.header_img})` , height: "50vh" }}
       ></div>
      
         <div className="bg-white relative bottom-52 w-[50%] min-h-[80vh] flex flex-col items-center justify-center p-6 shadow-lg rounded-lg">

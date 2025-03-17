@@ -11,7 +11,7 @@ export const Header = () => {
       <div
         className="min-h-screen mb-4 bg-cover bg-center flex items-center justify-center w-full overflow-hidden top-3 relative mt-[119px]"
         style={{
-          backgroundImage: "url('/header_img.png')",
+          backgroundImage: `url(${assets.header_img})`,
           width: "95%",
           height: "808px",
           left: "2.5%",
