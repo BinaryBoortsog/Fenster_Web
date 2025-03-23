@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { assets, projectsData } from '../assets/assets';
+import {projectsData } from '../assets/assets';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { IoMdMore } from "react-icons/io";
 

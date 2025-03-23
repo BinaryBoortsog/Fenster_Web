@@ -5,13 +5,14 @@ import Navbar from "./components/Navbar";
 import Product from "./components/Product";
 import News from "./components/News";
 import Footer from "./components/Footer";
-import Contact from "./pages/contact"; // Ensure correct file name (Contact.jsx or Contact.tsx)
+import Contact from "./pages/contact"; 
+import Tolgoi from "./pages/Product/tolgoi";
 
 export const App = () => {
   return (
     <Router>
-      <Navbar /> {/* Navbar should be on all pages */}
       
+      <Navbar /> {/* Navbar should be on all pages */}
       <Routes>
         {/* Home Route with Hero Section */}
         <Route
@@ -26,10 +27,16 @@ export const App = () => {
         />
 
         {/* Contact Page */}
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+        <Route path="/contact" element={
+          <Contact />
+          } />
+        <Route path="/tolgoi" element={
+          <Tolgoi/>
+          } 
+          />
 
-      <Footer /> {/* Footer should be on all pages */}
+      </Routes>
+      <Footer /> 
     </Router>
   );
 };
