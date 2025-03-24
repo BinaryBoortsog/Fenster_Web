@@ -20,7 +20,7 @@ export const Navbar = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center space-x-8 text-gray-700 text-xl gap-8">
-          <li><Link to="/Tolgoi" className="hover:text-gray-400">Buteegdehuun</Link></li>
+          <li><Link to="/productuud" className="hover:text-gray-400">Buteegdehuun</Link></li>
           <li><Link to="/about" className="hover:text-gray-400">kompany</Link></li>
           <li><Link to="/projects" className="hover:text-gray-400">Niitlel</Link></li>
         

@@ -1,7 +1,7 @@
 import React from "react";
 import { assets} from "../../assets/assets";
 import { logos,} from "../../assets/temdegt";
-import ProductList from "./buteegdehuun";
+
 
 export const Tolgoi = () => {
   return (
@@ -75,7 +75,6 @@ export const Tolgoi = () => {
         />
       ))}
       </div>
-      <ProductList />
     </div>
   );
 };

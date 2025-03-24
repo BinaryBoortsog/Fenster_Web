@@ -7,12 +7,14 @@ import News from "./components/News";
 import Footer from "./components/Footer";
 import Contact from "./pages/contact"; 
 import Tolgoi from "./pages/Product/tolgoi";
-
+import Buteegdehuun from "./pages/Product/buteegdehuun";
+import Window from "./pages/Product/window";
+import Metal from "./pages/Product/Metal";
+import Pasad from "./pages/Product/Pasad";
 export const App = () => {
   return (
     <Router>
-      
-      <Navbar /> {/* Navbar should be on all pages */}
+      <Navbar />
       <Routes>
         {/* Home Route with Hero Section */}
         <Route
@@ -30,9 +32,30 @@ export const App = () => {
         <Route path="/contact" element={
           <Contact />
           } />
-        <Route path="/tolgoi" element={
-          <Tolgoi/>
+        <Route path="/productuud" element={
+          <div>
+            <Tolgoi/>
+            <Buteegdehuun/>
+          </div>
           } 
+          />
+          <Route path="/window" element={
+          <div>
+            <Window/>
+          </div>
+          }
+          />
+          <Route path="/metal" element={
+          <div>
+            <Metal/>
+          </div>
+          }
+          />
+          <Route path="/pasad" element={
+          <div>
+            <Pasad/>
+          </div>
+          }
           />
 
       </Routes>

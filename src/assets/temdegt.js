@@ -11,6 +11,8 @@ import image1 from "./productImages/image1.png";
 import image2 from "./productImages/image2.png";
 import image3 from "./productImages/image3.png";
 import Grohe from "./productImages/Grohe.png";
+import uildver from "./productImages/uildver.png";
+
 
 export const logos = {
   alucom,
@@ -27,6 +29,7 @@ export const productImages = {
   image2,
   image3,
   Grohe,
+  uildver,
 };
 export const productDatas = [
   {

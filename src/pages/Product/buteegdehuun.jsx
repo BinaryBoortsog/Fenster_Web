@@ -1,5 +1,6 @@
 import React from "react";
 import { productDatas ,productImages} from "../../assets/temdegt";
+import { Link } from "react-router-dom";
 
 const ProductList = () => {
   return (
@@ -9,9 +10,9 @@ const ProductList = () => {
         {/* Title & Button */}
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl font-bold">Хуванцар цонх, хаалга</h2>
-          <button className="px-6 py-3 bg-customGreen shadow-md rounded-full hover:bg-emerald-500 text-white text-lg transition">
+          <Link to="/window" className="px-6 py-3 bg-customGreen shadow-md rounded-full hover:bg-emerald-500 text-white text-lg transition">
             Бүгдийг үзэх
-          </button>
+          </Link>
         </div>
 
         {/* Product List */}
@@ -41,9 +42,9 @@ const ProductList = () => {
         {/* Title & Button */}
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl font-bold">Metal Pasad</h2>
-          <button className="px-6 py-3 bg-customGreen shadow-md rounded-full hover:bg-emerald-500 text-white text-lg transition">
+          <Link to="/pasad" className="px-6 py-3 bg-customGreen shadow-md rounded-full hover:bg-emerald-500 text-white text-lg transition">
             Бүгдийг үзэх
-          </button>
+          </Link>
         </div>
 
         {/* Product List */}
@@ -73,9 +74,9 @@ const ProductList = () => {
         {/* Title & Button */}
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl font-bold">Shilen Pasad</h2>
-          <button className="px-6 py-3 bg-customGreen shadow-md rounded-full hover:bg-emerald-500 text-white text-lg transition">
+          <Link to="/pasad" className="px-6 py-3 bg-customGreen shadow-md rounded-full hover:bg-emerald-500 text-white text-lg transition">
             Бүгдийг үзэх
-          </button>
+          </Link>
         </div>
 
         {/* Product List */}
