@@ -1,16 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import Product from "./components/Product";
 import News from "./components/News";
-import Footer from "./components/Footer";
-import Contact from "./pages/contact"; 
-import Tolgoi from "./pages/Product/tolgoi";
+import Product from "./components/Product";
+import Contact from "./pages/contact";
 import Buteegdehuun from "./pages/Product/buteegdehuun";
-import Window from "./pages/Product/window";
 import Metal from "./pages/Product/Metal";
 import Pasad from "./pages/Product/Pasad";
+import Tolgoi from "./pages/Product/tolgoi";
+import Window from "./pages/Product/window";
 export const App = () => {
   return (
     <Router>
