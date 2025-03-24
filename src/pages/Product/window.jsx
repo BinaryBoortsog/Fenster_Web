@@ -1,6 +1,5 @@
 import React from "react";
 import { productDatas, productImages } from "../../assets/temdegt";
-import { assets } from "../../assets/assets";
 
 const Window = () => {
   return (
@@ -40,13 +39,50 @@ const Window = () => {
         </div>
       </div>
 
-      <div className="mx-auto  max-w-[100%] bg-white py-10">
-        <div
-          className="flex items-center justify-center w-full mt-20"
-        >
-          <img src={productImages.Grohe} alt="Banner" className="w-full h-auto" />
+          <div className="max-w-[100%] bg-customGray py-10">
+      <div className="flex items-center justify-center w-full my-20 bg-customGray">
+        <iframe 
+          className="w-[1200px] h-[608px] rounded-3xl" 
+          src="https://www.youtube.com/embed/s39PTBZNMEc?si=2KK1EsForThvf4Zw" 
+          title="YouTube video player" 
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowFullScreen
+        ></iframe>
+         </div>
         </div>
+
+        <div className="mt-32  bg-white flex flex-col justify-center rounded-2xl max-w-7xl mx-auto h-[592px] ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-transparent">
+          {/* Col1 - text */}
+          <div className="bg-transparent backdrop-blur-md rounded-2xl p-6 flex flex-col justify-center gap-6">
+            <h1 className="text-4xl font-bold text-black">
+            Цонхны чанар, эдэлгээ, бат бөх байдал профайл системээс эхэлдэг
+            </h1>
+            <p className="text-lg text-customGreen leading-relaxed">
+            DIN ISO 9001 стандарт нь Veka-ийн үйлдвэрлэлээс эхлээд удирдлага, ложистик хүртэлх бүх салбарыг хамардаг.
+            </p>
+            <p>
+            Veka брэндийн хувьд Европт хүчин төгөлдөр мөрдөгдөж буй цонхны 
+            профайлын хамгийн хатуу чанарын стандартыг дагаж мөрддөг. Veka-ийн 
+            бүх цонх, хаалганы профиль нь DIN EN 12608 стандартын дагуу 
+            хананы зузаантай, А зэрэглэлийн чанараар үйлдвэрлэгддэг. 
+            
+            1969 онд үүсгэн байгуулагдсан цагаасаа хойш цонхны профайлыг 
+            хөгжүүлэх чиглэлээр анхдагч ажлуудыг хийж ирсэн Veka брэнд 
+            өнөөдөр дэлхийн хуванцар цонхны зах зээлийн тэргүүлэгчдийн байр 
+            сууриа хадгалсаар байгаа билээ.
+            </p>
+          </div>
+          {/* Card 2 - Facade */}
+          <div className="bg-black bg-opacity-30  backdrop-blur-md rounded-2xl shadow-xl flex justify-center gap-6">
+             <img src={productImages.uildver2} alt="window" className="w-full h-full rounded-2xl" />
+          </div>
         </div>
+        
+      </div>
+
+
 
       {/* Product Section */}
       <div className="mx-auto max-w-7xl bg-white py-10 mt-10">

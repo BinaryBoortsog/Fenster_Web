@@ -12,6 +12,10 @@ import image2 from "./productImages/image2.png";
 import image3 from "./productImages/image3.png";
 import Grohe from "./productImages/Grohe.png";
 import uildver from "./productImages/uildver.png";
+import uildver2 from "./productImages/uildver2.png";
+import metalTsonh from "./productImages/metalTsonh.png";
+import uildver3 from "./productImages/uildver3.png";
+import uildver4 from "./productImages/uildver4.png";
 
 
 export const logos = {
@@ -30,6 +34,11 @@ export const productImages = {
   image3,
   Grohe,
   uildver,
+  uildver2,
+  metalTsonh,
+  uildver3,
+  uildver4
+
 };
 export const productDatas = [
   {

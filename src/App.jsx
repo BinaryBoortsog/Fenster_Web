@@ -45,7 +45,7 @@ export const App = () => {
           </div>
           }
           />
-          <Route path="/metal" element={
+          <Route path="/Metal" element={
           <div>
             <Metal/>
           </div>

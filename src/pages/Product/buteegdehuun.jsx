@@ -42,7 +42,7 @@ const ProductList = () => {
         {/* Title & Button */}
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl font-bold">Metal Pasad</h2>
-          <Link to="/pasad" className="px-6 py-3 bg-customGreen shadow-md rounded-full hover:bg-emerald-500 text-white text-lg transition">
+          <Link to="/Metal" className="px-6 py-3 bg-customGreen shadow-md rounded-full hover:bg-emerald-500 text-white text-lg transition">
             Бүгдийг үзэх
           </Link>
         </div>
