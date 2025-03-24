@@ -17,6 +17,9 @@ import profile_img_1 from './profile_img_1.png'
 import profile_img_2 from './profile_img_2.png'
 import profile_img_3 from './profile_img_3.png'
 import down from './down.png'
+import window from './window.png'
+import Banner from './Banner.png'
+import facade from './facade.png'
 
 export const assets = {
     logo,
@@ -33,6 +36,9 @@ export const assets = {
     left_arrow,
     right_arrow,
     down,
+    window,
+    Banner,
+    facade
 }
 
 export const projectsData = [

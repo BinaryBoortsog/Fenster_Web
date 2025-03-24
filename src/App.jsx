@@ -5,13 +5,16 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import News from "./components/News";
 import Product from "./components/Product";
-import Contact from "./pages/contact"; // Ensure correct file name (Contact.jsx or Contact.tsx)
-
+import Contact from "./pages/contact";
+import Buteegdehuun from "./pages/Product/buteegdehuun";
+import Metal from "./pages/Product/Metal";
+import Pasad from "./pages/Product/Pasad";
+import Tolgoi from "./pages/Product/tolgoi";
+import Window from "./pages/Product/window";
 export const App = () => {
   return (
     <Router>
-      <Navbar /> {/* Navbar should be on all pages */}
-      
+      <Navbar />
       <Routes>
         {/* Home Route with Hero Section */}
         <Route
@@ -26,10 +29,37 @@ export const App = () => {
         />
 
         {/* Contact Page */}
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+        <Route path="/contact" element={
+          <Contact />
+          } />
+        <Route path="/productuud" element={
+          <div>
+            <Tolgoi/>
+            <Buteegdehuun/>
+          </div>
+          } 
+          />
+          <Route path="/window" element={
+          <div>
+            <Window/>
+          </div>
+          }
+          />
+          <Route path="/metal" element={
+          <div>
+            <Metal/>
+          </div>
+          }
+          />
+          <Route path="/pasad" element={
+          <div>
+            <Pasad/>
+          </div>
+          }
+          />
 
-      <Footer /> {/* Footer should be on all pages */}
+      </Routes>
+      <Footer /> 
     </Router>
   );
 };
