@@ -1,10 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import Product from "./components/Product";
 import News from "./components/News";
-import Footer from "./components/Footer";
+import Product from "./components/Product";
 import Contact from "./pages/contact"; // Ensure correct file name (Contact.jsx or Contact.tsx)
 
 export const App = () => {

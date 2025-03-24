@@ -6,7 +6,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -35,3 +34,4 @@
     "vite": "^6.2.0"
   }
 }
+X
