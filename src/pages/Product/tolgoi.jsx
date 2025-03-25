@@ -1,6 +1,6 @@
 import React from "react";
-import { assets} from "../../assets/assets";
-import { logos,} from "../../assets/temdegt";
+import { assets } from "../../assets/assets";
+import { logos, } from "../../assets/temdegt";
 
 
 export const Tolgoi = () => {
@@ -17,9 +17,9 @@ export const Tolgoi = () => {
         <div className=" text-center flex flex-col items-center mt-20">
           {/* Title Section */}
           <div className="max-w-[850px] p-6 rounded-lg mb-20">
-            <h1 className="text-5xl font-bold text-black">Ireeduin horongo oruulalt</h1>
+            <h1 className="text-5xl font-default text-black">Ирээдүйн хөрөнгө оруулалт</h1>
             <p className="text-lg mt-4 text-black">
-              Material niiluulelt - uildverlelt - ugsralt
+              Материал нийлүүлэлт - үйлдвэрлэл - угсралт
             </p>
           </div>
 

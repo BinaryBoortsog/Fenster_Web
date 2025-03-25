@@ -10,8 +10,9 @@ export default {
         customBlue: '#14203E',
         customGray: '#E3E8F0',
         navBarText: '#67696B',
-        customGreen: '#3E9147',
+        customGreen: '#009951',
         customGraymore: '#CCD5E1',
+        customGreenmore: '#007A41',
       }
     },
   },
