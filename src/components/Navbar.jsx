@@ -11,10 +11,11 @@ export const Navbar = () => {
         
         {/* Logo */}
         <Link to="/">
-          <img 
-            src={assets.logo} 
+          <object 
+            type="image/svg+xml"
+            data={assets.logo} 
             alt="logo" 
-            className="w-[140px] h-auto md:w-[180px]"
+            className="max-w-[140px] h-auto md:max-w-[180px]"
           />
         </Link>
 
