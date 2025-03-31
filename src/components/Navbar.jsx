@@ -6,21 +6,21 @@ import { assets } from "../assets/assets";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [productMenuOpen, setProductMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full bg-white shadow-md p-4">
       <div className="container mx-auto max-w-[95%] h-20 flex justify-between items-center py-4 px-6 md:px-20 lg:px-32">
         
         {/* Logo */}
-        <Link to="/">
-          <object 
+        <a href="/">
+          <object
             type="image/svg+xml"
-            data={assets.logo} 
-            alt="logo" 
-            className="max-w-[140px] h-auto md:max-w-[180px]"
+            data={assets.logo}
+            className="max-w-[140px] h-auto cursor-pointer"
           />
-        </Link>
+        </a>
+
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center space-x-8 text-gray-500 text-base gap-8">
@@ -44,11 +44,35 @@ export const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          <Link to="/choose" className="inline-block rounded-full border-[1.3px] border-black w-40 h-15 px-11 py-3 bg-white-100 hover:bg-customGreen hover:border-customGreen hover:text-white text-sm font-medium">
-            Сонгох
-            <ChevronDownIcon className="ml-[0.5px] w-5 h-5 inline-block" />
-          </Link>
-          <Link to="/contact" className="outline-block rounded-full border-[1.3px] border-customGreen w-40 h-15 px-11 py-3 bg-customGreen shadow-[0_4px_10px_-4px_#14a44d] rounded-full hover:bg-customGreenmore text-customGray text-sm font-medium">
+        <div 
+            className="relative inline-block text-left"
+            onMouseEnter={() => setDropdownOpen(true)}
+            onMouseLeave={() => setDropdownOpen(false)}
+          >
+            <button
+              className={`inline-block rounded-full border-[1.3px] w-40 h-15 px-11 py-3 transition-all text-sm font-medium flex items-center justify-between ${
+                dropdownOpen ? "bg-green-600 text-white border-green-600" : "bg-white border-black text-black"
+              }`}
+            >
+              Сонгох
+              <ChevronDownIcon className={`ml-2 w-5 h-5 transition-transform ${dropdownOpen ? "rotate-180" : "rotate-0"}`} />
+            </button>
+            
+            {dropdownOpen && (
+              <div className="absolute w-40 mt-2 bg-white border rounded-lg shadow-lg flex flex-col">
+              <button className="px-4 py-2 w-full text-left hover:bg-gray-100 focus:bg-gray-200 focus:outline-none">
+                Хувь хүн
+              </button>
+              <button className="px-4 py-2 w-full text-left hover:bg-gray-100 focus:bg-gray-200 focus:outline-none">
+                Төсөл хэрэгжүүлэгч
+              </button>
+              <button className="px-4 py-2 w-full text-left hover:bg-gray-100 focus:bg-gray-200 focus:outline-none">
+                Мэргэжлийн
+              </button>
+            </div>
+            )}
+          </div>
+          <Link to="/contact" className="outline-block rounded-full border-[1.3px] border-customGreen w-40 h-15 px-11 py-3 bg-customGreen shadow-[0_4px_10px_-4px_#14a44d] rounded-full hover:bg-customGreenmore hover:shadow-[0] text-customGray text-sm font-medium">
             Хамтрах
           </Link>
         </div>

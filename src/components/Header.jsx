@@ -23,15 +23,12 @@ export const Header = () => {
         <div className="text-white">
           <div className='max-w-[850px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center items-center'>  
           <h1 className='md:text-5xl sm:text-6xl text-3xl font-bold md:py-6'>
-        <span className="text-customGray">chanartai material</span> 
-        <span className="text-customGreen"> naidvartai ugsralt</span>
+        <span className="text-customGray">Ирээдүйн хөрөнгө оруулалт</span> 
         <br />
-        <span className="text-customGray">hurdtai</span> 
-        <span className="text-customGray"> guitsetgel</span>
         </h1>
 
             <p className='md:text-xl sm:text-2xl text-lg font-normal md:py-6 text-customGraymore'>
-              Deed zergiin material ugsralt tonog tohooromj 
+              Дээд зэргийн материал, угсралт, тоног төхөөрөмж
             </p>
             <div className='relative top-10 flex space-x-8 mt-6 py-10'>
 
