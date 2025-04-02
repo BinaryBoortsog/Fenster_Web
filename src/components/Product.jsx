@@ -13,7 +13,7 @@ const Product = () => {
   return (
     <div className="min-h-screen bg-[#121726] text-white p-6 lg:px-44 lg:py-14 ">
         <div className="mb-8 ">
-        <h1 className="text-3xl font-bold text-center text-customGreen">Sanal Bolgoj bui</h1>
+        <h1 className="text-3xl font-bold text-center text-customGreen">Санал болгож буй</h1>
         <p className=" text-5xl text-center text-gray-300 mt-2 pb-10">
         Бүтээгдэхүүн
         </p>
