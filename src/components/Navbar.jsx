@@ -18,7 +18,10 @@ export const Navbar = () => {
             type="image/svg+xml"
             data={assets.logo}
             className="max-w-[140px] h-auto cursor-pointer"
-          />
+            aria-label="Company logo"
+          >
+            Your browser does not support SVGs. Please visit our homepage.
+          </object>
         </a>
 
 
@@ -44,13 +47,18 @@ export const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-        <div 
-            className="relative inline-block text-left"
+          <div 
+           className="relative inline-block text-left"
+           role="button"
+           tabIndex="0"
             onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
-          >
+          onMouseLeave={() => setDropdownOpen(false)}
+          onKeyDown={(e) => {
+           if (e.key === "Enter" || e.key === " ") setDropdownOpen(!dropdownOpen);
+           }}
+             >
             <button
-              className={`inline-block rounded-full border-[1.3px] w-40 h-15 px-11 py-3 transition-all text-sm font-medium flex items-center justify-between ${
+              className={`rounded-full border-[1.3px] w-40 h-15 px-11 py-3 transition-all text-sm font-medium flex items-center justify-between ${
                 dropdownOpen ? "bg-green-600 text-white border-green-600" : "bg-white border-black text-black"
               }`}
             >
@@ -72,7 +80,7 @@ export const Navbar = () => {
             </div>
             )}
           </div>
-          <Link to="/contact" className="outline-block rounded-full border-[1.3px] border-customGreen w-40 h-15 px-11 py-3 bg-customGreen shadow-[0_4px_10px_-4px_#14a44d] rounded-full hover:bg-customGreenmore hover:shadow-[0] text-customGray text-sm font-medium">
+          <Link to="/contact" className="outline-block rounded-full border-[1.3px] border-customGreen w-40 h-15 px-11 py-3 bg-customGreen shadow-[0_4px_10px_-4px_#14a44d] hover:bg-customGreenmore hover:shadow-[0] text-customGray text-sm font-medium">
             Хамтрах
           </Link>
         </div>
