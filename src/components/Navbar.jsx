@@ -17,11 +17,8 @@ export const Navbar = () => {
           <object
             type="image/svg+xml"
             data={assets.logo}
-            className="max-w-[140px] h-auto cursor-pointer"
-            aria-label="Company logo"
-          >
-            Your browser does not support SVGs. Please visit our homepage.
-          </object>
+            className="max-w-[140px] h-auto cursor-pointer pointer-events-none"
+          />
         </a>
 
 
@@ -80,7 +77,7 @@ export const Navbar = () => {
             </div>
             )}
           </div>
-          <Link to="/contact" className="outline-block rounded-full border-[1.3px] border-customGreen w-40 h-15 px-11 py-3 bg-customGreen shadow-[0_4px_10px_-4px_#14a44d] hover:bg-customGreenmore hover:shadow-[0] text-customGray text-sm font-medium">
+          <Link to="/contact" className="outline-block rounded-full text-center border-[1.3px] border-customGreen w-40 h-15 px-11 py-3 bg-customGreen shadow-[0_4px_10px_-4px_#14a44d] rounded-full hover:bg-customGreenmore hover:shadow-[0] text-customGray text-sm font-medium">
             Хамтрах
           </Link>
         </div>
