@@ -1,6 +1,7 @@
 import React from "react";
 import { productDatas, productImages } from "../../assets/temdegt";
-import { assets } from "../../assets/assets";
+
+
 
 const Pasad = () => {
   return (
