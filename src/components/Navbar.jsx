@@ -13,13 +13,13 @@ export const Navbar = () => {
       <div className="container mx-auto max-w-[95%] h-20 flex justify-between items-center py-4 px-6 md:px-20 lg:px-32">
         
         {/* Logo */}
-        <a href="/">
+        <Link to="/" className="flex items-center">
           <object
             type="image/svg+xml"
             data={assets.logo}
             className="max-w-[140px] h-auto cursor-pointer pointer-events-none"
           />
-        </a>
+        </Link>
 
 
         {/* Desktop Navigation */}
