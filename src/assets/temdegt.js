@@ -16,6 +16,10 @@ import uildver2 from "./productImages/uildver2.png";
 import metalTsonh from "./productImages/metalTsonh.png";
 import uildver3 from "./productImages/uildver3.png";
 import uildver4 from "./productImages/uildver4.png";
+import Metalpasad from "./productImages/MetalPasad.png";
+import image8 from "./productImages/image8.png";
+import image9 from "./productImages/image9.png";
+import nitlel from "./productImages/nitlel.png";
 
 
 export const logos = {
@@ -37,7 +41,11 @@ export const productImages = {
   uildver2,
   metalTsonh,
   uildver3,
-  uildver4
+  uildver4,
+  Metalpasad,
+  image8,
+  image9,
+  nitlel,
 
 };
 export const productDatas = [

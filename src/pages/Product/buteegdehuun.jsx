@@ -41,8 +41,39 @@ const ProductList = () => {
         <div className="mx-auto  max-w-[85%] ">
         {/* Title & Button */}
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-2xl font-bold">Metal Pasad</h2>
+          <h2 className="text-2xl font-bold">metal tsonh haalga</h2>
           <Link to="/Metal" className="px-6 py-3 bg-customGreen shadow-md rounded-full hover:bg-emerald-500 text-white text-lg transition">
+            Бүгдийг үзэх
+          </Link>
+        </div>
+
+        <div className="flex overflow-x-auto gap-4 scrollbar-hide">
+          {productDatas.map((product) => (
+            <div
+              key={product.id}
+              className="p-4 rounded-xl min-w-[270px] flex-shrink-0"
+            >
+              <img
+                src={product.image}
+                alt={product.title}
+                className="rounded-lg mb-3 w-full h-[180px] object-cover"
+              />
+              <h3 className="text-lg font-semibold">{product.title}</h3>
+              <p className="text-sm text-gray-600">{product.description}</p>
+              <button className="mt-3 px-4 py-2 border rounded-lg text-green-600 border-green-600 hover:bg-green-600 hover:text-white transition">
+                Үргэлжлүүлэх →
+              </button>
+            </div>
+          ))}
+        </div>
+        </div>
+    </div>
+    <div className="mx-auto  max-w-[100%] bg-customGray py-10">
+        <div className="mx-auto  max-w-[85%] ">
+        {/* Title & Button */}
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-2xl font-bold">Metal Pasad</h2>
+          <Link to="/MetalPasad" className="px-6 py-3 bg-customGreen shadow-md rounded-full hover:bg-emerald-500 text-white text-lg transition">
             Бүгдийг үзэх
           </Link>
         </div>

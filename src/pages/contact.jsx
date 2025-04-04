@@ -2,7 +2,7 @@ import { useState } from "react";
 import { assets } from '../assets/assets';
 
 export default function CollaborationForm() {
-  const [step, setStep] = useState(1);
+  const [step] = useState(1);
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 ">
@@ -19,7 +19,7 @@ export default function CollaborationForm() {
           <p className="text-gray-600 ">Сайн байна уу, та бидэнд мэдээллээ үлдээнэ үү. Бид таны хүсэлттэй танилцаад, эргээд холбоо барих болно.</p>
 
           <div className="flex justify-center items-center space-x-0 mb-8">
-          {[1, 2, 3].map((num, index) => (
+          {[1, 2, 3].map((num,) => (
             <div key={num} className="flex items-center">
               <div
                 className={`w-10 h-10 flex justify-center items-center rounded-full border-[1.3px] text-gray-600 font-default transition-all ${

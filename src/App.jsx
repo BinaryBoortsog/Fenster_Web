@@ -11,6 +11,8 @@ import Metal from "./pages/Product/Metal";
 import Pasad from "./pages/Product/Pasad";
 import Tolgoi from "./pages/Product/tolgoi";
 import Window from "./pages/Product/window";
+import MetalPasad from "./pages/Product/MetalPasad";
+import Niitlel from "./pages/niitlel";
 export const App = () => {
   return (
     <Router>
@@ -51,9 +53,22 @@ export const App = () => {
           </div>
           }
           />
+          <Route path="/MetalPasad" element={
+          <div>
+            <MetalPasad/>
+          </div>
+          }
+          />
+          
           <Route path="/pasad" element={
           <div>
             <Pasad/>
+          </div>
+          }
+          />
+          <Route path="/niitlel" element={
+          <div>
+            <Niitlel/>
           </div>
           }
           />
