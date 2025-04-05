@@ -1,4 +1,4 @@
-import React from "react";
+import React  ,{ useState }from "react";
 import {
   Stepper,
   Step,
@@ -6,6 +6,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { assets } from "../assets/assets";
+
 
 const Contact = () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -19,6 +20,30 @@ const Contact = () => {
   const handlePrev = () => {
     if (!isFirstStep) setActiveStep((cur) => cur - 1);
   };
+  const [formData, setFormData] = useState({
+    projectCount: "",
+    projectName: "",
+    projectType: "",
+    projectDuration: "",
+    employees: "",
+    productInterest: "",
+    pastPartners: "",
+    projectDetails: "",
+    email: "",
+    resume: "",
+    description: "",
+    companyName: "",
+    position: ""
+  });
+
+
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    };
 
   return (
     <div className="bg-white flex flex-col items-center justify-center">
@@ -53,6 +78,10 @@ const Contact = () => {
     ${activeStep >= 0 ? "border-customGreen" : "border-customGraymore"}
     flex items-center justify-center w-16 h-16`}
 >
+    
+<p className="absolute bottom-24 text-center w-full font-sans text-customBlue">
+  tanii tuhai
+</p>
   <Typography
     variant="h4"
     className={`text-center ${
@@ -79,6 +108,10 @@ const Contact = () => {
       activeStep >= 1 ? "border-customGreen bg-white" : "border-customGraymore bg-gray-100"
     } flex items-center justify-center w-16 h-16 hover:bg-customGreen`}
   >
+    <p className="absolute bottom-24 right-4 text-center w-full font-sans text-customBlue whitespace-nowrap">
+    Худалдан авалт
+
+</p>
     <Typography
        variant="h4"
        className={`text-center ${
@@ -105,6 +138,10 @@ const Contact = () => {
       activeStep === 2 ? "border-customGreen bg-white" : "border-customGraymore bg-gray-100"
     } flex items-center justify-center w-16 h-16 hover:bg-customGreen`}
   >
+     <p className="absolute bottom-24 right-4 text-center w-full font-sans text-customBlue whitespace-nowrap">
+    Holboo barih
+
+</p>
     <Typography
       variant="h4"
       className={`text-center ${
@@ -116,38 +153,193 @@ const Contact = () => {
   </Step>
 </Stepper>
 
+<div className="w-full p-4 ">
+            {activeStep === 0 && (
+              <div className="flex flex-row justify-center gap-10 items-center">
+                <button className="w-1/3 border border-customBlue p-4 rounded-3xl flex items-center justify-center"
+                onClick={() => setActiveStep(1)}>
+                  <span className="text-sm font-medium">Huvi hun</span>
+                </button>
+                <button className="w-1/3 border p-4 border-customBlue rounded-3xl flex items-center justify-center"
+                onClick={() => setActiveStep(1)}>
+                  <span className="text-sm font-medium">tosol heregjuulegch</span>
+                </button>
+              </div>
+            )}
 
-        {/* Step бүрийн контент (хүсвэл өөр өөр form оруулах хэсэг) */}
-        <div className="mt-10 w-full px-4">
-          {activeStep === 0 && (
-            <div className="text-center text-gray-700">Хувийн мэдээлэл оруулах хэсэг</div>
-          )}
-          {activeStep === 1 && (
-            <div className="text-center text-gray-700">Сонголтууд оруулах хэсэг</div>
-          )}
-          {activeStep === 2 && (
-            <div className="text-center text-gray-700">Баталгаажуулж илгээх хэсэг</div>
-          )}
-        </div>
-        </div>
+            {activeStep === 1 && (
+              <div className="flex flex-col gap-y-20">
+              <div className="grid grid-cols-2 gap-10">
+               <div className="flex flex-col gap-y-5">
+                <label htmlFor="employees" className="text-sm font-medium">
+                Танай байгууллага жилд дунджаар хэдэн төсөл хэргэжүүлдэг вэ?
+                </label>
+                <input id="employees" type="text" name="employees" value={formData.employees} 
+                onChange={handleChange} className="w-full p-2 border rounded" />
+                </div>
+
+                <div className="flex flex-col gap-y-10">
+                <label htmlFor="employees" className="text-sm font-medium">
+                Төслийн нэр ба байршил ?
+                </label>
+                <input id="productInterest" type="text" name="productInterest" value={formData.productInterest} 
+                onChange={handleChange} className="w-full p-2 border rounded" />
+                </div>
+                <div className="flex flex-col gap-y-5">
+                <label htmlFor="employees" className="text-sm font-medium">
+                Танай байгууллага жилд дунджаар хэдэн төсөл хэргэжүүлдэг вэ?
+                </label>
+                <input id="employees" type="text" name="employees" value={formData.employees} 
+                onChange={handleChange} className="w-full p-2 border rounded" />
+                </div>
+                <div className="flex flex-col gap-y-5">
+                <label htmlFor="employees" className="text-sm font-medium">
+                Танай байгууллага жилд дунджаар хэдэн төсөл хэргэжүүлдэг вэ?
+                </label>
+                <input id="employees" type="text" name="employees" value={formData.employees} 
+                onChange={handleChange} className="w-full p-2 border rounded" />
+                </div>
+                <div className="flex flex-col gap-y-5">
+                <label htmlFor="employees" className="text-sm font-medium">
+                Танай байгууллага жилд дунджаар хэдэн төсөл хэргэжүүлдэг вэ?
+                </label>
+                <input id="employees" type="text" name="employees" value={formData.employees} 
+                onChange={handleChange} className="w-full p-2 border rounded" />
+                </div>
+                <div className="flex flex-col gap-y-5">
+                <label htmlFor="employees" className="text-sm font-medium">
+                Танай байгууллага жилд дунджаар хэдэн төсөл хэргэжүүлдэг вэ?
+                </label>
+                <input id="employees" type="text" name="employees" value={formData.employees} 
+                onChange={handleChange} className="w-full p-2 border rounded" />
+                </div>
+                <div className="flex flex-col gap-y-5">
+                <label htmlFor="employees" className="text-sm font-medium">
+                Танай байгууллага жилд дунджаар хэдэн төсөл хэргэжүүлдэг вэ?
+                </label>
+                <input id="employees" type="text" name="employees" value={formData.employees} 
+                onChange={handleChange} className="w-full p-2 border rounded" />
+                </div>
+
+                
+              </div>
+
+              <div className="flex flex-col gap-y-5">
+                <label htmlFor="employees" className="text-sm font-medium">
+                Төслийн талаар дэлгэрэнгүй мэдээллийг бичнэ үү
+                </label>
+                <input id="employees" type="text" name="employees" value={formData.employees} 
+                onChange={handleChange} className="w-full p-2 border  h-[172px] rounded-2xl" />
+                </div>
+
+
+                <div className="flex flex-col gap-y-5">
+                    <label className="text-sm font-medium mb-1">
+                      Төслийн зураг, түүвэр болон хавсаргах файлыг оруулна уу
+                    </label>
+
+                    <label
+                      htmlFor="resume-upload"
+                      className="w-full h-[172px] flex items-center justify-center bg-customGreen bg-opacity-20 rounded-2xl border cursor-pointer hover:bg-opacity-30 transition"
+                    >
+                       <span className="text-white font-semibold text-sm items-center flex flex-row justify-center bg-customGreen rounded-md w-[191px] h-[33px]">
+                            {formData.resume ? formData.resume.name : "Файл нэмэх"}
+                         </span>
+                    </label>
+
+                    <input
+                      id="resume-upload"
+                      type="file"
+                      name="resume"
+                      className="hidden"
+                      onChange={(e) =>
+                        setFormData({ ...formData, resume: e.target.files[0] })
+                      }
+                    />
+                  </div>
+
+
+              </div>
+              
+            )}
+
+            {activeStep === 2 && (
+              <div className="flex flex-col gap-y-20">
+              <div className="grid grid-cols-2 gap-10">
+              <div className="flex flex-col gap-y-5">
+                <label htmlFor="employees" className="text-sm font-medium">
+                Байгууллагын нэр
+                </label>
+                <input id="employees" type="text" name="employees" value={formData.employees} 
+                onChange={handleChange} className="w-full p-2 border rounded" />
+                </div>
+
+
+                <div className="flex flex-col gap-y-5">
+                <label htmlFor="employees" className="text-sm font-medium">
+                Албан тушаал
+                </label>
+                <input id="employees" type="text" name="employees" value={formData.employees} 
+                onChange={handleChange} className="w-full p-2 border rounded" />
+                </div>
+
+                <div className="flex flex-col gap-y-5">
+                <label htmlFor="employees" className="text-sm font-medium">
+                Нэр
+                </label>
+                <input id="employees" type="text" name="employees" value={formData.employees} 
+                onChange={handleChange} className="w-full p-2 border rounded" />
+                </div>
+
+                <div className="flex flex-col gap-y-5">
+                <label htmlFor="employees" className="text-sm font-medium">
+                И-мэйл хаяг
+                </label>
+                <input id="employees" type="text" name="employees" value={formData.employees} 
+                onChange={handleChange} className="w-full p-2 border rounded" />
+                </div>
+
+                <div className="flex flex-col gap-y-5">
+                <label htmlFor="employees" className="text-sm font-medium">
+                Утасны дугаар
+                </label>
+                <input id="employees" type="text" name="employees" value={formData.employees} 
+                onChange={handleChange} className="w-full p-2 border rounded" />
+                </div>
+
+                <div className="flex flex-col gap-y-5">
+                <label htmlFor="employees" className="text-sm font-medium">
+                Байршил
+                </label>
+                <input id="employees" type="text" name="employees" value={formData.employees} 
+                onChange={handleChange} className="w-full p-2 border rounded" />
+                </div>
+                
+                  </div>
+                </div>
+            )}
+          </div>
+</div>
 
         {/* Navigation Buttons */}
-        <div className="mt-12 flex justify-between w-full max-w-md">
+        <div className="mt-12 flex justify-end w-full pr-8 gap-8 h-20">
+          <div className="flex items-center gap-14 bg-white mr-28">
           <Button
             onClick={handlePrev}
             disabled={isFirstStep}
             variant="outlined"
-            color="blue"
+            className="border-customGreen text-customGreen shadow-xl shadow-customGreen/40 hover:shadow-customGreen/30"
           >
             Өмнөх
           </Button>
           <Button
             onClick={handleNext}
             disabled={isLastStep}
-            color="blue"
+            className="border-customGreen text-white shadow-xl shadow-customGreen/40 hover:shadow-customGreen/30 bg-customGreen"
           >
             Дараах
           </Button>
+          </div>
         </div>
       </div>
     </div>
