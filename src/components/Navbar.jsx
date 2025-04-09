@@ -6,6 +6,8 @@ import { assets } from "../assets/assets";
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [productDropdown, setProductDropdown] = useState(false);
+  const [companyDropdown, setCompanyDropdown] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
@@ -14,7 +16,6 @@ export const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 z-50 w-full bg-white shadow-md p-4">
       <div className="container mx-auto max-w-[95%] h-20 flex justify-between items-center py-4 px-6 md:px-20 lg:px-32">
-
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
@@ -26,18 +27,91 @@ export const Navbar = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center space-x-8 text-gray-500 text-base gap-8">
-          <li>
-            <Link to="/productuud" className="hover:text-gray-400">
-              Бүтээгдэхүүн
-              <ChevronDownIcon className="ml-1 w-5 h-5 inline-block" />
-            </Link>
-          </li>
-          <li>
-            <Link to="/kompani" className="hover:text-gray-400">
+        <li className="relative">
+  <button
+    onClick={() => setProductDropdown((prev) => !prev)}
+    className="hover:text-gray-400 flex items-center"
+  >
+    Бүтээгдэхүүн
+    <ChevronDownIcon
+      className={`ml-1 w-5 h-5 transition-transform ${productDropdown ? "rotate-180" : ""}`}
+    />
+  </button>
+
+  {productDropdown && (
+  <ul className="absolute -translate-x-48 -left-24 top-10  z-50 justify-center bg-customGray w-[1177px] h-[200px] shadow-md rounded-md flex py-2">
+    <div className='flex flex-row bg-customGray space-x-4 pt-2'>
+    <li className='flex flex-col bg-white w-[210px] h-[160px] rounded-md'>
+      <Link to="/productuud/type1" className="block px-4 py-2 hover:bg-customGraymore">Xуванцар цонх,haalga</Link>
+
+      <Link to="/productuud/type2" className="block px-4 py-2 hover:bg-gray-100 text-xs">Veka Softline 82</Link>
+
+      <Link to="/productuud/type3" className="block px-4 py-2 hover:bg-gray-100 text-xs">Veka Softline 70</Link>
+
+      <Link to="/productuud/type4" className="block px-4 py-2 hover:bg-gray-100 text-xs">Veka Euroline</Link>
+    </li>
+    <li className='flex flex-col bg-white w-[210px] h-[160px] rounded-md'>
+      <Link to="/productuud/type2" className="block px-4 py-2 hover:bg-customGray">Металл цонх</Link>
+      <div className="grid grid-cols-2 gap-2 px-1">
+        <h1 className='text-sm '>tsonh</h1>
+        <h1 className='text-sm '>haalga</h1>
+        <Link to="/productuud/type2" className=" hover:text-customGreen text-[10px]">Alutech ALTW62W</Link>
+        <Link to="/productuud/type2" className="  hover:text-customGreen text-[10px]">Alutech ALTW72W</Link>
+        <Link to="/productuud/type2" className=" hover:text-customGreen text-[10px]">BENKAM BKT77</Link>
+        <Link to="/productuud/type2" className="  hover:text-customGreen text-[10px]">Alutech ALTW62D</Link>
+        <Link to="/productuud/type2" className="  hover:text-customGreen text-[10px]">Alutech ALTW72D</Link>
+        </div>
+    </li>
+    <li className='flex flex-col bg-white w-[210px] h-[160px] rounded-md'>
+      <Link to="/productuud/type1" className="block px-4 py-2  hover:bg-customGraymore">Металл фасад</Link>
+      <Link to="/productuud/type2" className=" px-4   hover:bg-gray-100 text-[10px]">SIBALUX PФ хавтан</Link>
+      <Link to="/productuud/type3" className=" px-4  hover:bg-gray-100 text-[10px]">SIBALUX-PФ ПЛЮС хавтан</Link>
+      <Link to="/productuud/type4" className=" px-4 hover:bg-gray-100 text-[10px]">SIBALUX A2</Link>
+      <Link to="/productuud/type4" className=" px-4  hover:bg-gray-100 text-[10px]">Alucom хавтан</Link>
+      <Link to="/productuud/type4" className=" px-4  hover:bg-gray-100 text-[10px]">ThermoWool эрдэст чулуун хөвөн</Link>
+    </li>
+    <li className='flex flex-col bg-white w-[210px] h-[160px] rounded-md'>
+      <Link to="/productuud/type1" className=" px-4 py-2  hover:bg-customGraymore">Шилэн фасад</Link>
+
+      <Link to="/productuud/type2" className=" px-4  hover:bg-gray-100 text-[10px]">Шилэн фасад</Link>
+
+      <Link to="/productuud/type3" className=" px-4 hover:bg-gray-100 text-[10px]">Alutech ALT F50 систем</Link>
+
+     
+    </li>
+    <li className='flex flex-col bg-white w-[210px] h-[160px] rounded-md'>
+      <Link to="/productuud/type4" className="block px-4 py-2 hover:bg-customGray">Grohe</Link>
+    </li>
+    </div>
+  </ul>
+  
+)}
+
+</li>
+
+
+          <li className="relative">
+            <button
+              onClick={() => setCompanyDropdown((prev) => !prev)}
+              className="hover:text-gray-400 flex items-center"
+            >
               Компани
-              <ChevronDownIcon className="ml-1 w-5 h-5 inline-block" />
-            </Link>
+              <ChevronDownIcon
+                className={`ml-1 w-5 h-5 transition-transform ${companyDropdown ? "rotate-180" : ""}`}
+              />
+            </button>
+            {companyDropdown && (
+              <ul className="absolute top-full mt-2 left-0 bg-white shadow-md rounded-md z-10 w-48 py-2">
+                <li>
+                  <Link to="/kompani/about" className="block px-4 py-2 hover:bg-gray-100">Бидний тухай</Link>
+                </li>
+                <li>
+                  <Link to="/kompani/team" className="block px-4 py-2 hover:bg-gray-100">Манай баг</Link>
+                </li>
+              </ul>
+            )}
           </li>
+
           <li>
             <Link to="/niitlel" className="hover:text-gray-400">
               Нийтлэл
