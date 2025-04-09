@@ -21,7 +21,7 @@ export const Navbar = () => {
           <img
             src={assets.logo}
             alt="Logo"
-            className="max-w-[140px] h-auto cursor-pointer"
+            className="max-w-[140px] h-auto cursor-pointer w-auto"
           />
         </Link>
 
@@ -73,13 +73,13 @@ export const Navbar = () => {
     <li className='flex flex-col bg-white w-[210px] h-[160px] rounded-md'>
       <Link to="/productuud/type1" className=" px-4 py-2  hover:bg-customGraymore">Шилэн фасад</Link>
 
-      <Link to="/productuud/type2" className=" px-4  hover:bg-gray-100 text-[10px]">Шилэн фасад</Link>
+      <Link to="/productuud/type2" className=" px-4  hover:bg-gray-100 text-[10px]">Veka Softline 82</Link>
 
-      <Link to="/productuud/type3" className=" px-4 hover:bg-gray-100 text-[10px]">Alutech ALT F50 систем</Link>
+      <Link to="/productuud/type3" className=" px-4 hover:bg-gray-100 text-[10px]">Veka Softline 70</Link>
 
-     
+      <Link to="/productuud/type4" className=" px-4 hover:bg-gray-100 text-[10px]">Veka Euroline</Link>
     </li>
-    <li className='flex flex-col bg-white w-[210px] h-[160px] rounded-md'>
+    <li className='flex flex-col bg-white w-[210px] h-[140px] rounded-md'>
       <Link to="/productuud/type4" className="block px-4 py-2 hover:bg-customGray">Grohe</Link>
     </li>
     </div>
@@ -101,14 +101,25 @@ export const Navbar = () => {
               />
             </button>
             {companyDropdown && (
-              <ul className="absolute top-full mt-2 left-0 bg-white shadow-md rounded-md z-10 w-48 py-2">
-                <li>
-                  <Link to="/kompani/about" className="block px-4 py-2 hover:bg-gray-100">Бидний тухай</Link>
-                </li>
-                <li>
-                  <Link to="/kompani/team" className="block px-4 py-2 hover:bg-gray-100">Манай баг</Link>
-                </li>
-              </ul>
+              <ul className="absolute -translate-x-64 -left-56 top-10  z-50 justify-center bg-customGray w-[1177px] h-[200px] shadow-md rounded-md flex py-2">
+              <div className='flex flex-row bg-customGray space-x-4 pt-2'>
+              <li className='flex flex-col bg-white w-[210px] h-[160px] rounded-md'>
+                <Link to="/productuud/type1" className="block px-4 py-2 hover:bg-customGraymore">kompanii taniltsuulaga</Link>
+              </li>
+              <li className='flex flex-col bg-white w-[210px] h-[160px] rounded-md'>
+                <Link to="/productuud/type2" className="block px-4 py-2 hover:bg-customGray">Металл цонх</Link>
+              </li>
+              <li className='flex flex-col bg-white w-[210px] h-[160px] rounded-md'>
+                <Link to="/productuud/type1" className="block px-4 py-2  hover:bg-customGraymore">Xуванцар цонх,haalga</Link>
+              </li>
+              <li className='flex flex-col bg-white w-[210px] h-[160px] rounded-md'>
+                <Link to="/productuud/type1" className="block px-4 py-2  hover:bg-customGraymore">Xуванцар цонх,haalga</Link>
+              </li>
+              <li className='flex flex-col bg-white w-[210px] h-[140px] rounded-md'>
+                <Link to="/productuud/type4" className="block px-4 py-2 hover:bg-customGray">holboo barih</Link>
+              </li>
+              </div>
+            </ul>
             )}
           </li>
 
@@ -204,7 +215,7 @@ export const Navbar = () => {
           <ul className="space-y-4 text-gray-700 font-medium">
             <li>
               <Link to="/" className="block py-2" onClick={() => setMenuOpen(false)}>
-                Home
+                Ehlel
               </Link>
             </li>
             <li>
