@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 
@@ -8,10 +8,27 @@ export const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [productDropdown, setProductDropdown] = useState(false);
   const [companyDropdown, setCompanyDropdown] = useState(false);
+ 
 
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
   };
+  const dropdownRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setProductDropdown(false);
+        setCompanyDropdown(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full bg-white shadow-md p-4">
@@ -27,16 +44,21 @@ export const Navbar = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center space-x-8 text-gray-500 text-base gap-8">
-        <li className="relative">
-  <button
-    onClick={() => setProductDropdown((prev) => !prev)}
+        <li className="relative"
+        
+         onMouseLeave={() => setDropdownOpen(false)}>
+ <Link to="/productuud" 
+ ref={dropdownRef}
     className="hover:text-gray-400 flex items-center"
+    onClick={() => setProductDropdown((prev) => !prev)}
+    onMouseEnter={() => setProductDropdown(true)}
+
   >
     Бүтээгдэхүүн
     <ChevronDownIcon
       className={`ml-1 w-5 h-5 transition-transform ${productDropdown ? "rotate-180" : ""}`}
     />
-  </button>
+  </Link>
 
   {productDropdown && (
   <ul className="absolute -translate-x-48 -left-24 top-10  z-50 justify-center bg-customGray w-[1177px] h-[200px] shadow-md rounded-md flex py-2">
@@ -90,16 +112,19 @@ export const Navbar = () => {
 </li>
 
 
-          <li className="relative">
-            <button
-              onClick={() => setCompanyDropdown((prev) => !prev)}
-              className="hover:text-gray-400 flex items-center"
+          <li className="relative"
+          onMouseLeave={() => setDropdownOpen(false)}>
+            <Link to={"/kompani"}
+            className="hover:text-gray-400 flex items-center"
+            ref={dropdownRef}
+            onClick={() => setCompanyDropdown((prev) => !prev)}
+            onMouseEnter={() =>setCompanyDropdown(true)}
             >
               Компани
               <ChevronDownIcon
                 className={`ml-1 w-5 h-5 transition-transform ${companyDropdown ? "rotate-180" : ""}`}
               />
-            </button>
+            </Link>
             {companyDropdown && (
               <ul className="absolute -translate-x-64 -left-56 top-10  z-50 justify-center bg-customGray w-[1177px] h-[200px] shadow-md rounded-md flex py-2">
               <div className='flex flex-row bg-customGray space-x-4 pt-2'>
